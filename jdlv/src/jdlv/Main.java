@@ -2,9 +2,9 @@ package jdlv;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		grille plateau= new grille(10,10);
+		Simulation première= new Simulation();
 		System.out.println("beuleu");
 	}
 

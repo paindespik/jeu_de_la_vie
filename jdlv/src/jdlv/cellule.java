@@ -4,8 +4,8 @@ public class cellule {
 
 	boolean remplie;
 	
-	cellule(boolean remplie){
-		this.remplie=remplie;
+	cellule(boolean r){
+		this.remplie=r;
 	}
 	
 	boolean estRemplie() {

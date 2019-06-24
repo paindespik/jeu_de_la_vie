@@ -2,10 +2,13 @@ package jdlv;
 import java.util.Random;
 public class grille {
 	boolean rand;
+	int tailleX, tailleY;
 	cellule[][] grille;
 	grille(int x,int y){
-		for(int i=0;i<x;i++) {
-			for(int j=0;j<y;j++) {
+		this.tailleX=x;
+		this.tailleY=y;
+		for(int i=0;i<tailleX;i++) {
+			for(int j=0;j<tailleY;j++) {
 				Random r= new Random();
 				if (r.nextInt(5)==1) {
 					rand=true;
@@ -20,8 +23,8 @@ public class grille {
 	
 	
 	void afficherGrille() {
-		for(int i=0;i<x;i++) {
-			for(int j=0;j<y;j++) {
+		for(int j=0;j<tailleX;j++) {
+			for(int i=0;i<tailleY;i++) {
 				if (grille[i][j].remplie) {
 					System.out.print("[X]");
 				}

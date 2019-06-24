@@ -5,5 +5,7 @@ public class Simulation {
 	
 	Simulation(){
 		plateau= new grille(20,20);
+	
 	}
+	plateau.afficherGrille();
 }

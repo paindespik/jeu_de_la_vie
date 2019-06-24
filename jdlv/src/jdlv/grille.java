@@ -21,6 +21,13 @@ public class grille {
 		}
 	}
 	
+	void nbEntourage(int x, int y) {
+		if 
+	}
+	
+	
+	
+	
 	
 	void afficherGrille() {
 		for(int j=0;j<tailleX;j++) {

@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		Simulation première= new Simulation();
+		Simulation premiere= new Simulation();
 		System.out.println("beuleu");
 	}
 

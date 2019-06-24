@@ -1,6 +1,5 @@
 package jdlv;
-import java.util.*;
-import java.lang.*;
+
 
 public class Simulation {
 	grille plateau;
@@ -9,12 +8,13 @@ public class Simulation {
 	
 	Simulation() throws InterruptedException{
 
-		plateau= new grille(20,20);
+		plateau= new grille(40,40);
 		int[][] tabTransition= new int[plateau.tailleX][plateau.tailleY];
-	
+		int time=200;
 		plateau.afficherGrille();
+		System.out.println();
 		nb=plateau.nbRemplie();
-		Thread.sleep(5 * 1000);
+		Thread.sleep(time);
 		
 		
 		
@@ -56,9 +56,9 @@ public class Simulation {
 			
 			
 			plateau.afficherGrille();
-			Thread.sleep(5 * 1000);
+			Thread.sleep(time);
 			System.out.println();
-			System.out.println("nb=" + nb);
+			
 			
 			nb=plateau.nbRemplie();
 		}

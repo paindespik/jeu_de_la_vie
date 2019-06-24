@@ -4,19 +4,21 @@ public class grille {
 	boolean rand;
 	int tailleX, tailleY;
 	cellule[][] grille;
-	
-	
-	
+
 	grille(int x,int y){
 		
 		this.tailleX=x;
 		this.tailleY=y;
 		grille=new cellule[tailleX][tailleY];
-		for(int i=0;i<tailleX;i++) {
-			for(int j=0;j<tailleY;j++) {
+		for(int j=0;j<tailleY;j++) {
+			for(int i=0;i<tailleX;i++) {
 				Random r= new Random();
-				if (r.nextInt(7)==1) {
-					rand=true;
+				if (r.nextInt(2)==1) {
+					if(i>tailleX*3/7 && i<tailleX*4/7 && j>tailleY*3/7 && j<tailleY*4/7)
+					{
+						rand=true;
+					}
+					
 				}
 				else {
 					rand=false;
@@ -81,10 +83,10 @@ public class grille {
 		for(int j=0;j<tailleX;j++) {
 			for(int i=0;i<tailleY;i++) {
 				if (grille[i][j].remplie) {
-					System.out.print("[X]");
+					System.out.print("|X|");
 				}
 				else {
-					System.out.print("[ ]");
+					System.out.print("| |");
 				}
 			}
 			System.out.println();

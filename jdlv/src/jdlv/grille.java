@@ -110,11 +110,19 @@ public class grille {
 		return nb;
 	}
 	
-	void vider(int x,int y) {
-		grille[x][y].remplie=false;
+	void changerEtat(int x,int y) {
+		if(grille[x][y].remplie) {
+			grille[x][y].remplie=false;
+		}
+		else {
+			grille[x][y].remplie=true;
+		}
 	}
-	void Remplir(int x,int y) {
-		grille[x][y].remplie=true;
+	boolean retournEtat(int x,int y) {
+		if (grille[x][y].remplie) {
+			return true;
+		}
+		return false;
 	}
 	
 	
